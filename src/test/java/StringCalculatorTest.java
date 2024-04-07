@@ -38,12 +38,12 @@ class StringCalculatorTest {
                             """
             )
             @DisplayName("구분자로 분리한 숫자들의 합을 반환한다.")
-            void add_basicExpression(String expression, int expectedValue) {
+            void add_basicExpression(String expression, int expect) {
                 // when
-                int actualValue = calculator.add(expression);
+                int actual = calculator.add(expression);
 
                 // then
-                assertThat(actualValue).isEqualTo(expectedValue);
+                assertThat(actual).isEqualTo(expect);
             }
         }
 
@@ -58,12 +58,12 @@ class StringCalculatorTest {
                     '//t\n1t t2t3t', 6
                     """)
             @DisplayName("커스텀한 구분자로 분리한 숫자들의 합을 반환합니다.")
-            void add_customExpression(String expression, int expectedValue) {
+            void add_customExpression(String expression, int expect) {
                 // when
-                int actualValue = calculator.add(expression);
+                int actual = calculator.add(expression);
 
                 // then
-                assertThat(actualValue).isEqualTo(expectedValue);
+                assertThat(actual).isEqualTo(expect);
             }
         }
 
